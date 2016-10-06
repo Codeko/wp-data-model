@@ -1,0 +1,409 @@
+{
+    "key": "group_576a6ddf727cc",
+    "title": "Resumen",
+    "fields": [
+        {
+            "key": "field_576a6e0e48c07",
+            "label": "Tipo de presentaci\u00f3n",
+            "name": "tipo_de_presentacion",
+            "type": "radio",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "pendiente": "Pendiente",
+                "rechazada": "Rechazada",
+                "oral": "Oral",
+                "poster": "Poster"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "pendiente",
+            "layout": "vertical",
+            "return_format": "value"
+        },
+        {
+            "key": "field_576a6e4e48c08",
+            "label": "\u00c1rea tem\u00e1tica",
+            "name": "area_tematica",
+            "type": "taxonomy",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "area_tematica",
+            "field_type": "select",
+            "allow_null": 0,
+            "add_term": 0,
+            "save_terms": 1,
+            "load_terms": 1,
+            "return_format": "object",
+            "multiple": 0
+        },
+        {
+            "key": "field_576a6f4848c0c",
+            "label": "Incluir imagen",
+            "name": "incluir_imagen",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Marque esta casilla para incluir una imagen en el resumen.",
+            "default_value": 0
+        },
+        {
+            "key": "field_576a6f0c48c0b",
+            "label": "Imagen",
+            "name": "imagen",
+            "type": "image",
+            "instructions": "NOTA : Se aceptar\u00e1n im\u00e1genes en formato, .JPG .GIF y .PNG con un tama\u00f1o m\u00e1ximo de 500 KBytes",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_576a6f4848c0c",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "uploadedTo",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "500 KB",
+            "mime_types": "jpg,gif,png"
+        },
+        {
+            "key": "field_576a6eb848c09",
+            "label": "Resumen",
+            "name": "resumen_content",
+            "type": "textarea",
+            "instructions": "Si desea a\u00f1adir negritas, cursivas, caracteres especiales o f\u00f3rmulas matem\u00e1ticas acceda por favor a la seccion <a href=\"\/category\/manuales-y-ayuda\/\" target=\"_blank\">INFORMACION \/ AYUDA <\/a>, y ah\u00ed encontrara los manuales espec\u00edficos para cada necesidad.",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_576a6f4848c0c",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": "resumen_acf_textarea"
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": 3000,
+            "rows": "",
+            "new_lines": "wpautop"
+        },
+        {
+            "key": "field_576a6ee248c0a",
+            "label": "Resumen",
+            "name": "resumen_content_con_imagen",
+            "type": "textarea",
+            "instructions": "Si desea a\u00f1adir negritas, cursivas, caracteres especiales o f\u00f3rmulas matem\u00e1ticas acceda por favor a la seccion <a href=\"\/category\/manuales-y-ayuda\/\" target=\"_blank\">INFORMACION \/ AYUDA <\/a>, y ah\u00ed encontrara los manuales espec\u00edficos para cada necesidad.",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_576a6f4848c0c",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": "resumen_acf_textarea_img"
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": 2000,
+            "rows": "",
+            "new_lines": "wpautop"
+        },
+        {
+            "key": "field_576a774e2fbbb",
+            "label": "Autores",
+            "name": "autores",
+            "type": "repeater",
+            "instructions": "Para acceder al manual para dar de alta Autores haga click <a href=\"\/doy-alta-los-autores-resumen\/\" target=\"_blank\">AQUI<\/a>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_576a77b82fbbc",
+            "min": 1,
+            "max": "",
+            "layout": "row",
+            "button_label": "A\u00f1adir nuevo autor",
+            "sub_fields": [
+                {
+                    "key": "field_576a77b82fbbc",
+                    "label": "Nombre y apellidos",
+                    "name": "nombre_y_apellidos",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_577651370e17a",
+                    "label": "Filiaciones",
+                    "name": "filiaciones",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "field_5776518b0e17b",
+                    "min": 1,
+                    "max": "",
+                    "layout": "table",
+                    "button_label": "A\u00f1adir nueva filiaci\u00f3n",
+                    "sub_fields": [
+                        {
+                            "key": "field_5776518b0e17b",
+                            "label": "Filiaci\u00f3n",
+                            "name": "filiacion",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "filiaciones-field",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "field_577e49b5d376f",
+            "label": "Posici\u00f3n",
+            "name": "posicion",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_5771111a8a6e9",
+            "label": "Identificador",
+            "name": "resumen_id",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_5773bc0d636c9",
+            "label": "Evaluaci\u00f3n",
+            "name": "evaluacion_resumen",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_5773bc22636ca",
+            "label": "Evaluaci\u00f3n experta",
+            "name": "evaluacion_experta_resumen",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_5791d3089325e",
+            "label": "Estado",
+            "name": "estado",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "col-md-4",
+                "id": ""
+            },
+            "choices": {
+                "publish": "Finalizado",
+                "draft": "Borrador"
+            },
+            "default_value": [
+                "draft"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "disabled": 0,
+            "readonly": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_57f39cdfae956",
+            "label": "Pie formulario",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "no-label",
+                "id": ""
+            },
+            "message": "Si desea guardar el resumen en modo BORRADOR, haga click en guardar, si por el contrario quiere FINALIZAR el resumen y recibir una copia por mail haga click en FINALIZAR. Recuerde que podr\u00e1 modificar el resumen aunque lo haya finalizado hasta la fecha limite de recepci\u00f3n.",
+            "new_lines": "br",
+            "esc_html": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "resumen"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "field",
+    "hide_on_screen": [
+        "permalink",
+        "the_content",
+        "excerpt",
+        "custom_fields",
+        "discussion",
+        "comments",
+        "revisions",
+        "slug",
+        "format",
+        "page_attributes",
+        "featured_image",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1475647608
+}
